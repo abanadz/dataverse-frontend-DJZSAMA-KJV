@@ -629,6 +629,26 @@ npm run test:coverage
 
 </details>
 
+### Tracking recent changes and vulnerabilities
+
+Use the following command from the repository root to generate a markdown report that combines
+recent commit activity with an `npm audit` vulnerability summary:
+
+```bash
+npm run report:changes-vulns
+```
+
+The report script also supports optional arguments:
+
+```bash
+./scripts/track-recent-changes-with-vulnerabilities.sh "30 days ago" reports
+```
+
+- Argument 1: Git time window for commit tracking (default: `14 days ago`)
+- Argument 2: Report output directory (default: `reports/`)
+
+Generated files are named `change-vulnerability-report-<timestamp>.md`.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <br>
 
