@@ -72,7 +72,8 @@
     "build-storybook": "storybook build",
     "test:storybook": "test-storybook",
     "test:storybook-all": "concurrently 'test-storybook' 'cd packages/design-system && npm run test:storybook'",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "report:changes-vulns": "./scripts/track-recent-changes-with-vulnerabilities.sh"
   },
   "pre-commit": [
     "typecheck",
